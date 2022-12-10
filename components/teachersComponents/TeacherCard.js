@@ -8,18 +8,18 @@ export default function TeacherCard({ teacher }) {
       style={{ boxShadow: "0px 5px 15px 2px #764cd866" }}
     >
       <div
-        className="rounded-lg p-1 bg-gradient-to-r from-purple-500 via-purple-400 to-indigo-600"
+        className="h-full rounded-lg p-1 bg-gradient-to-r from-purple-500 via-purple-400 to-indigo-600"
       >
-        <div className="bg-white p-2 rounded">
+        <div className="bg-white p-2 rounded h-full">
           <div className="image rounded-lg overflow-hidden">
             <Image src={image} alt='card-imaa' />
           </div>
-          <div className="text">
-            <h2>{name}</h2>
+          <div className="text pt-4">
+            <h2 className="text-xl lg:text-2xl pb-2">Name : {name}</h2>
             <p>{desc}</p>
-            <p>{sub}</p>
-            <p>{Country}</p>
-            <p>{email}</p>
+            <p className="py-2 font-bold">Language : {sub}</p>
+            <p>From : {Country}</p>
+            <p>Email : {email}</p>
           </div>
         </div>
       </div>
