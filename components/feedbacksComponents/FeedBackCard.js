@@ -1,7 +1,10 @@
-export default function FeedBackCard() {
+export default function FeedBackCard({ feedback }) {
+  console.log(feedback)
   return (
-    <div>
-      <h1>I am a card</h1>
+    <div className="border rounded-lg p-4">
+      <div>
+        
+      </div>
     </div>
   );
 }
