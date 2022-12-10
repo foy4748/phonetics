@@ -19,7 +19,7 @@ const DiamondCard = () => {
                         <li className="step step-primary">Helping tools and Notes</li>
                     </ul>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Book Now</button>
+                        <button className="btn btn-primary">Enroll Now</button>
                     </div>
                 </div>
             </div>
