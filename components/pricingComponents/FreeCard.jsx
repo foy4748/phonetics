@@ -6,7 +6,7 @@ const FreeCard = () => {
             <div className="card w-96 bg-base-100 shadow-xl">
                 <div className="card-body">
                     <h2 className="card-title text-2xl font-bold">Free Course</h2>
-                    <ul className="steps steps-vertical lg:steps-horizontal">
+                    <ul className="steps steps-vertical">
                         <li className="step"><span className='opacity-50'>Live Class</span></li>
                         <li className="step step-primary">3 Class Recorded </li>
                         <li className="step"><span className='opacity-50'>Live Mentor Support</span></li>

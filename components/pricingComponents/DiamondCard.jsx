@@ -5,8 +5,8 @@ const DiamondCard = () => {
         <div>
             <div className="card w-96 bg-base-100 shadow-xl">
                 <div className="card-body">
-                    <h2 className="card-title">Free Course</h2>
-                    <ul className="steps steps-vertical lg:steps-horizontal">
+                    <h2 className="card-title text-2xl font-bold">Diamond Course</h2>
+                    <ul className="steps steps-vertical">
                         <li className="step step-primary">Live Class</li>
                         <li className="step step-primary">Class Recorded</li>
                         <li className="step step-primary">Live Mentor Support</li>
