@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import Image from "next/image";
 export default function LanguageCard({ LCardDetails }) {
   const { flagUrl, languageName, New } = LCardDetails;
@@ -19,7 +21,9 @@ export default function LanguageCard({ LCardDetails }) {
         </h2>
         <p>Learn {languageName} at your own pace</p>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary">Book a Lesson</button>
+          <Link href={`/lessons/${languageName.toLowerCase()}`}>
+            <button className="btn btn-primary">Book a Lesson</button>
+          </Link>
         </div>
       </div>
     </div>
