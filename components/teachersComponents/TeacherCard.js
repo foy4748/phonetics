@@ -15,7 +15,7 @@ export default function TeacherCard({ teacher }) {
             <Image src={image} alt='card-imaa' />
           </div>
           <div className="text pt-4">
-            <h2 className="text-xl lg:text-2xl pb-2">Name : {name}</h2>
+            <h2 className="text-xl lg:text-2xl pb-2 font-bold">Name : {name}</h2>
             <p>{desc}</p>
             <p className="py-2 font-bold">Language : {sub}</p>
             <p>From : {Country}</p>

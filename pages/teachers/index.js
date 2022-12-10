@@ -1,3 +1,4 @@
+import TeacherBanner from "../../components/teachersComponents/TeacherBanner";
 import TeacherCard from "../../components/teachersComponents/TeacherCard";
 import arabic from "../../Images/Arabic.png";
 import chinese from "../../Images/chineese.png";
@@ -46,7 +47,7 @@ export default function Lessons() {
       sub: "French",
       Country: "France",
       image: french,
-      email: "sakana@email.com",
+      email: "annbella@email.com",
     },
 
     {
@@ -88,6 +89,7 @@ export default function Lessons() {
     {
       name: "Angelina",
       desc: "She teach the principles of the English language, using different methods to deliver successful courses, responsibilities can vary based on the academic level and native language of the students.",
+      sub: "Russian",
       Country: "Russia",
       image: russian,
       email: "angellina@email.com",
@@ -106,9 +108,12 @@ export default function Lessons() {
 
   return (
     <div className="max-w-screen-xl mx-auto">
-      <h1>I am Teachers well done</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
 
+      {/* teacher banner */}
+      <TeacherBanner />
+
+      {/* teacher cards */}
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
         {
           teacherList.map((teacher, i) => <TeacherCard key={i} teacher={teacher} />)
         }
