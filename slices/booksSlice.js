@@ -1,4 +1,6 @@
-export const books = [
+import { createSlice } from "@reduxjs/toolkit";
+
+const initialState = [
   {
     id: 1,
     title: "Learn Spanish 4 Books in 1",
@@ -61,3 +63,18 @@ export const books = [
   },
 ];
 
+export const bookSlice = createSlice({
+  name: "books",
+  initialState,
+  reducers: {
+    buyAbook: (state, action) => {
+      console.log(action.payload);
+      state[action.payload]["paid"] = true;
+    },
+  },
+});
+
+// Action creators are generated for each case reducer function
+export const { buyAbook } = bookSlice.actions;
+
+export default bookSlice.reducer;
