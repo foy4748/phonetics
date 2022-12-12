@@ -1,8 +1,10 @@
 import Link from "next/link";
+import { useDispatch } from "react-redux";
 
 import Image from "next/image";
-export default function LanguageCard({ LCardDetails }) {
-  const { flagUrl, languageName, New } = LCardDetails;
+export default function LanguageCard({ LCardDetails, bookAlesson, idx }) {
+  const { flagUrl, languageName, New, booked } = LCardDetails;
+  const dispatch = useDispatch();
   return (
     <div className="card w-100 lg:w-96 bg-base-100 shadow-xl">
       <figure className="w-full">
@@ -21,9 +23,14 @@ export default function LanguageCard({ LCardDetails }) {
         </h2>
         <p>Learn {languageName} at your own pace</p>
         <div className="card-actions justify-end">
-          <Link href={`/lessons/${languageName.toLowerCase()}`}>
-            <button className="btn btn-primary">Book a Lesson</button>
-          </Link>
+          <button
+            disabled={booked}
+            onClick={() => dispatch(bookAlesson(idx))}
+            className="btn btn-primary"
+          >
+            Book a Lesson
+          </button>
+          <Link href={`/lessons/${languageName.toLowerCase()}`}></Link>
         </div>
       </div>
     </div>
