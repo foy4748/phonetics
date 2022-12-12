@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { useDispatch } from "react-redux";
 
+import toast from "react-hot-toast";
+
 import Image from "next/image";
 export default function LanguageCard({ LCardDetails, bookAlesson, idx }) {
   const { flagUrl, languageName, New, booked } = LCardDetails;
@@ -25,7 +27,12 @@ export default function LanguageCard({ LCardDetails, bookAlesson, idx }) {
         <div className="card-actions justify-end">
           <button
             disabled={booked}
-            onClick={() => dispatch(bookAlesson(idx))}
+            onClick={() => {
+              dispatch(bookAlesson(idx));
+              toast.success(
+                `${languageName} language lesson booked successfully`
+              );
+            }}
             className="btn btn-primary"
           >
             Book a Lesson
